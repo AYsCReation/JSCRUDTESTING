@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD TESTING</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 40%;
+            margin: auto;
+            justify-content: space-between;
+            min-height: 120px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        label {
+            margin-right: 10px;
+        }
+
+        input, select {
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        table {
+            width: 80%;
+            margin: auto;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <h1>CRUD TESTING USING JS</h1>
+    <div id="container" style="text-align: center;">
+        <form>
+            <div style="display: flex; justify-content: space-between;">
+                <label for="fname">First Name</label>
+                <input type="text" name="fname" id="fname" placeholder="Enter First name">
+                <label for="lname">Last Name</label>
+                <input type="text" name="lname" id="lname" placeholder="Enter Last name">
+            </div>
+            <div style="display: flex; justify-content: space-between;">
+                <label for="address">Address</label>
+                <input type="text" style="width: 80%;" name="address" id="address" placeholder="Enter your Address">
+            </div>
+            <div style="display: flex; width: 100%;">
+                <div style="display: flex; justify-content: space-between; width: 50%; margin-right: 10px;">
+                    <label for="position">Position</label>
+                    <select style="width: 60%;" name="position" id="position">
+                        <option value="WebDeveloper">Web Developer</option>
+                        <option value="hr">HR</option>
+                        <option value="manager">Manager</option>
+                    </select>
+                </div>
+                <div style="display: flex; justify-content: space-between;width: 50%; margin-left: 10px;">
+                    <label for="gender">Gender :</label>
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="female">Female</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <h2>Here is the table</h2>
+    <table id="table">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Address</th>
+                <th>Position</th>
+                <th>Gender</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+    </table>
+
+    <script src="index.js"></script>
+</body>
+</html>
